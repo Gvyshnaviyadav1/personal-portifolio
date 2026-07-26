@@ -29,7 +29,7 @@ export default function HomePage() {
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Hi, I&apos;m <strong className="text-slate-900">{personalInfo.name}</strong>. I specialize in cloud infrastructure, Jenkins release engineering, Docker containerization, and modern full-stack web applications.
+          Hi, I&apos;m <strong className="text-slate-900">{personalInfo.name}</strong>. Fourth-year Computer Science undergraduate at IIT Goa passionate about full-stack development, DevOps. Experienced in building production-ready web applications with React, Django, PostgreSQL, Docker, and Jenkins, with a strong interest in scalable software systems
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
@@ -43,7 +43,7 @@ export default function HomePage() {
               Get In Touch
             </Button>
           </Link>
-          
+
         </div>
       </section>
 
@@ -118,7 +118,7 @@ export default function HomePage() {
                       <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                       {skill.name}
                     </span>
-                  
+
                   </li>
                 ))}
               </ul>

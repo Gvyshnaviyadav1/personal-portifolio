@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Heart, Code2 } from 'lucide-react';
+import { Github, Linkedin, Mail} from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const Footer: React.FC = () => {
