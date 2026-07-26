@@ -64,8 +64,8 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block font-medium">Academic Reg</span>
-                  <span className="text-slate-800 font-medium text-xs sm:text-sm">B.Tech CSE, IIT Goa</span>
+                  <span className="text-xs text-slate-400 block font-medium">Phone</span>
+                  <span className="text-slate-800 font-medium text-xs sm:text-sm">+91 9741911034</span>
                 </div>
               </div>
             </div>

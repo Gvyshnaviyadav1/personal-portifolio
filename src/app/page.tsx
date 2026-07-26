@@ -7,7 +7,7 @@ import { featuredProjects, personalInfo, skillGroups } from '@/data/portfolioDat
 import { ArrowRight, Terminal, Cpu, Cloud, CheckCircle2, FileCode } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'G. Vyshnavi Yadav | DevOps & Full Stack Engineer',
+  title: 'G. Vyshnavi Yadav',
   description: 'Welcome to my portfolio! Check out CodeQuest, Note Nexus, and my DevOps engineering work at IIT Goa.',
 };
 
@@ -43,11 +43,7 @@ export default function HomePage() {
               Get In Touch
             </Button>
           </Link>
-          <Link href="/code">
-            <Button variant="ghost" size="lg" className="w-full sm:w-auto">
-              <FileCode className="w-4 h-4 mr-1 text-indigo-600" /> Source Inspector
-            </Button>
-          </Link>
+          
         </div>
       </section>
 
@@ -57,7 +53,7 @@ export default function HomePage() {
           <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-3">
             <Cpu className="w-6 h-6" />
           </div>
-          <p className="text-3xl font-extrabold text-slate-900">8.5 / 10</p>
+          <p className="text-3xl font-extrabold text-slate-900">8.26 / 10</p>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">CGPA @ IIT Goa CSE</p>
         </div>
 
@@ -73,7 +69,7 @@ export default function HomePage() {
           <div className="w-12 h-12 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center mx-auto mb-3">
             <Terminal className="w-6 h-6" />
           </div>
-          <p className="text-3xl font-extrabold text-slate-900">4+ Major</p>
+          <p className="text-3xl font-extrabold text-slate-900">2+ Major</p>
           <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Full Stack & Systems Projects</p>
         </div>
       </section>
@@ -122,7 +118,7 @@ export default function HomePage() {
                       <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                       {skill.name}
                     </span>
-                    <span className="text-xs font-semibold text-slate-400">{skill.level}%</span>
+                  
                   </li>
                 ))}
               </ul>

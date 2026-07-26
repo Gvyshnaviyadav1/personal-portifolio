@@ -1,95 +1,78 @@
 import { Project, Experience, Education, SkillGroup } from '../types';
-
+import ss1 from "../../assets/ss1.png";
+import ss2 from "../../assets/ss2.png";
 export const personalInfo = {
   name: 'G. Vyshnavi Yadav',
-  title: 'DevOps & Full Stack Software Engineer',
-  institution: 'IIT Goa',
+  title: 'Computer Science Undergraduate | DevOps & Full Stack Developer',
+  institution: 'Indian Institute of Technology Goa',
   degree: 'B.Tech in Computer Science & Engineering',
-  cgpa: '8.5 / 10',
-  location: 'Goa / India',
-  email: 'vyshnavi.yadav@iitgoa.ac.in',
-  phone: '+91 98765 43210',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
-  bio: 'Computer Science undergraduate at IIT Goa with hands-on experience in cloud infrastructure, Jenkins CI/CD pipeline optimization, Docker containerization, and modern full-stack web development (React, Next.js, Python/Django REST, PostgreSQL). Passionate about reliable deployment systems and scalable software architectures.',
+  cgpa: '8.26 / 10',
+  location: 'Chinnapanahalli, Bangalore',
+  email: 'vyshnavi.yadav.23031@iitgoa.ac.in',
+  phone: '+91 9741911034',
+  github: 'https://github.com/Gvyshnaviyadav1',
+  linkedin: 'www.linkedin.com/in/g-vyshnavi-yadav',
+  bio: 'Fourth-year Computer Science undergraduate at IIT Goa with experience in DevOps, CI/CD automation, cloud deployment, and full-stack web development. Passionate about building scalable applications, automating software delivery, and solving real-world engineering problems.',
 };
 
 export const featuredProjects: Project[] = [
   {
     id: 'codequest',
-    title: 'CodeQuest — Online Judge & Compiler',
-    description: 'High-throughput code execution engine supporting C++, Python, and JavaScript with sandboxed Docker execution, time/memory limit enforcement, and dynamic test case validation.',
-    longDescription: 'CodeQuest is an end-to-end online judge application built for competitive programming and academic assessments. It executes user code inside isolated, disposable Docker containers to guarantee sandboxed security against malicious system calls, memory leaks, and infinite loops.',
+    title: 'CodeQuest — Online Judge Platform',
+    description:
+      'Full-stack Online Judge supporting C++, Java, and Python with secure Docker-based execution and AI-powered coding assistance.',
+    longDescription:
+      'Developed and deployed a complete Online Judge platform using React, Django REST Framework, PostgreSQL, and Docker. Implemented secure isolated code execution and integrated Gemini AI for hints, sample solutions, and complexity analysis.',
     category: 'Full Stack',
-    tags: ['React.js', 'Node.js', 'Docker', 'Express', 'Tailwind CSS', 'C++', 'Python'],
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+    tags: [
+      'React',
+      'Django REST',
+      'PostgreSQL',
+      'Docker',
+      'AWS EC2',
+      'Gemini API'
+    ],
+    image: ss2,
     liveUrl: '#',
     githubUrl: '#',
     featured: true,
     architectureHighlights: [
-      'Isolated Docker container runner per code submission with strict memory limits (128MB) & CPU quotas',
-      'Asynchronous task queue using Redis for non-blocking submission polling',
-      'Real-time leaderboards, execution runtime analytics, and test case result visualizer',
-      'Custom syntax highlighting and Monaco editor integration'
+      'Docker-based isolated compiler execution',
+      'Supports C++, Java and Python',
+      'Gemini AI integration for hints and code correction',
+      'Automatic time and space complexity analysis'
     ],
     pipelineSteps: [
-      'Client submits source code via WebSocket / REST',
-      'Node.js queue spawns isolated ephemeral Docker container',
-      'Sub-second test-case evaluation with diff checker',
-      'Aggregated execution metrics saved to database & streamed to client'
+      'User submits source code',
+      'Docker container securely compiles and executes',
+      'Test cases are evaluated',
+      'Results are stored and displayed in real time'
     ]
   },
   {
     id: 'note-nexus',
-    title: 'Note Nexus — Knowledge Management Hub',
-    description: 'Full-stack collaborative markdown note-taking workspace featuring live tag indexing, search capabilities, relational note linking, and automated cloud sync.',
-    longDescription: 'Note Nexus combines the speed of local plain-text markdown editing with cloud persistence and graph-like relational tagging. Designed with Django REST Framework and PostgreSQL for robust backend data integrity.',
-    category: 'Full Stack',
-    tags: ['Next.js', 'TypeScript', 'Django REST', 'PostgreSQL', 'Tailwind CSS'],
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: true,
-    architectureHighlights: [
-      'Django REST Framework backend with JWT authorization & granular user permissions',
-      'PostgreSQL full-text search index for sub-10ms tag and content queries',
-      'Auto-saving client-side markdown editor with instant live render preview',
-      'Export notes to PDF, HTML, or raw Markdown bundles'
-    ]
-  },
-  {
-    id: 'devops-pipeline',
-    title: 'Release Engineering & Jenkins CI/CD Automation',
-    description: 'Automated release management pipeline engineered during Cognam Technologies internship, cutting execution time from ~3 hours to ~30 seconds with zero-downtime AWS EC2 deployment.',
-    longDescription: 'Engineered an end-to-end automated deployment pipeline incorporating GitHub webhooks, multi-stage Jenkins declarative pipelines, automated unit/integration testing, Docker image building, and Amazon ECR pushing.',
-    category: 'DevOps & Cloud',
-    tags: ['Jenkins', 'Docker', 'AWS EC2', 'AWS ECR', 'GitHub Actions', 'Linux', 'Shell'],
-    image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
-    featured: true,
-    architectureHighlights: [
-      'Multi-branch Jenkinsfile pipeline with automated Slack/Email alert notifications on build status',
-      'Docker layer caching strategy reducing Docker build duration by 85%',
-      'Automated staging rollback on healthcheck failure during EC2 deployment',
-      'Infrastructure as Code (IaC) setup with Shell scripts and Ansible playbooks'
-    ]
-  },
-  {
-    id: 'iitgoa-portal',
-    title: 'IIT Goa Academic Portal Companion',
-    description: 'Centralized student utility portal for course tracking, GPA estimation, assignment deadlines, and peer study resource distribution.',
-    longDescription: 'Built to streamline academic workflow for CSE students at IIT Goa. Features responsive schedule planner, PDF syllabus parser, and assignment reminder system.',
+    title: 'Note Nexus — Multi-Client Task & Messaging Server',
+    description:
+      'Python TCP socket-based messaging and task management server supporting multiple authenticated clients.',
+    longDescription:
+      'Built a client-server application enabling messaging, task tracking, calendar synchronization, and collaborative diary editing with real-time updates.',
     category: 'Systems / Utilities',
-    tags: ['TypeScript', 'React.js', 'Tailwind CSS', 'Vite', 'Local Database'],
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    tags: [
+      'Python',
+      'Socket Programming',
+      'TCP',
+      'Multi-threading'
+    ],
+    image:
+      ss1,
     liveUrl: '#',
     githubUrl: '#',
-    featured: false,
+    featured: true,
     architectureHighlights: [
-      'Client-side state persistence with fast local searching',
-      'Dynamic GPA & SGPA estimator with grade weight customizer',
-      'Light/Dark mode accessibility compliance with WCAG AA standards'
+      'Multi-client TCP socket server',
+      'User authentication',
+      'Collaborative diary editing',
+      'Real-time synchronization'
     ]
   }
 ];
@@ -98,36 +81,64 @@ export const experiences: Experience[] = [
   {
     company: 'Cognam Technologies',
     role: 'DevOps Intern',
-    location: 'Remote / India',
-    period: '18 May 2026 – 17 July 2026',
+    location: 'Remote',
+    period: 'May 2026 – July 2026',
     type: 'Internship',
     description: [
-      'Engineered a release management pipeline using Jenkins CI/CD, reducing build execution and deployment time from ~3 hours down to ~30 seconds.',
-      'Automated build status notifications via webhooks to Slack channels, increasing engineering feedback speed across the software team.',
-      'Containerized backend services using Docker and orchestrated image pushes to Amazon ECR and AWS EC2 runtime environments.'
+      'Developed and enhanced Jenkins-based CI/CD pipelines for production applications.',
+      'Architected an automated build notification framework for developers and QA engineers.',
+      'Integrated Jenkins with Email and GitHub workflows.',
+      'Engineered an automated Release Management Pipeline reducing release time from nearly 3 hours to about 30 seconds.'
     ],
-    technologies: ['Jenkins', 'Docker', 'AWS EC2', 'AWS ECR', 'Shell Scripting', 'Git']
+    technologies: [
+      'Jenkins',
+      'Docker',
+      'Git',
+      'GitHub',
+      'Linux'
+    ]
+  },
+  {
+    company: 'Bluestock Fintech',
+    role: 'Software Development Engineer Intern',
+    location: 'Remote',
+    period: 'May 2025 – June 2025',
+    type: 'Internship',
+    description: [
+      'Contributed to a production-level IPO web application.',
+      'Developed REST APIs using Django.',
+      'Managed PostgreSQL databases.',
+      'Built responsive ReactJS frontend following Figma designs.'
+    ],
+    technologies: [
+      'ReactJS',
+      'Django',
+      'PostgreSQL',
+      'JavaScript',
+      'Tailwind CSS'
+    ]
   }
 ];
+
 
 export const education: Education = {
   institution: 'Indian Institute of Technology Goa (IIT Goa)',
   degree: 'Bachelor of Technology (B.Tech) in Computer Science & Engineering',
   period: '2023 – 2027',
-  cgpa: '8.5 / 10.0',
+  cgpa: '8.26 / 10.0',
   coursework: [
     'Data Structures & Algorithms',
     'Operating Systems',
     'Computer Networks',
-    'Database Management Systems (DBMS)',
-    'Software Engineering',
-    'Object-Oriented Programming (C++)',
+    'Machine Learning ',
+    'Artificial Intelligence',
     'Computer System Architecture'
   ],
   achievements: [
-    'Active Member & Contributor at CSE Technical Club, IIT Goa',
-    'Secured top percentile in JEE Advanced to secure admission at IIT Goa',
-    'Led technical workshops on Git, Docker, and CI/CD fundamentals for junior batches'
+    'Amazon ML Challenge - Top 250 among 20,000+ teams',
+    'Solved 300+ algorithmic problems',
+    'Qualified for IIWPC Quarter Finals'
+
   ]
 };
 
@@ -135,34 +146,33 @@ export const skillGroups: SkillGroup[] = [
   {
     category: 'Languages & Core',
     skills: [
-      { name: 'C++', level: 90 },
-      { name: 'TypeScript', level: 88 },
-      { name: 'JavaScript (ES6+)', level: 92 },
-      { name: 'Python', level: 85 },
-      { name: 'SQL', level: 82 },
-      { name: 'HTML5 / CSS3', level: 95 }
+      { name: 'C++' },
+      { name: 'TypeScript' },
+      { name: 'JavaScript' },
+      { name: 'Python' },
+      { name: 'SQL' },
+      { name: 'HTML5 / CSS3' }
     ]
   },
   {
     category: 'DevOps & Cloud',
     skills: [
-      { name: 'Jenkins CI/CD', level: 88 },
-      { name: 'Docker & Containers', level: 86 },
-      { name: 'AWS EC2 & S3', level: 80 },
-      { name: 'GitHub Actions', level: 84 },
-      { name: 'Linux / Bash Scripting', level: 88 },
-      { name: 'Git & Version Control', level: 92 }
+      { name: 'Jenkins CI/CD' },
+      { name: 'Docker & Containers' },
+      { name: 'AWS EC2 ' },
+      { name: 'GitHub Actions' },
+      { name: 'Shell Scripting' },
+      { name: 'Git & Version Control' }
     ]
   },
   {
     category: 'Frontend & Backend',
     skills: [
-      { name: 'React.js', level: 90 },
-      { name: 'Next.js (App Router)', level: 88 },
-      { name: 'Tailwind CSS', level: 94 },
-      { name: 'Node.js & Express', level: 84 },
-      { name: 'Django REST Framework', level: 80 },
-      { name: 'PostgreSQL', level: 82 }
+      { name: 'React.js' },
+      { name: 'Next.js ' },
+      { name: 'Tailwind CSS' },
+      { name: 'Django REST Framework' },
+      { name: 'PostgreSQL' }
     ]
   }
 ];

@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image"
 import React, { useState } from 'react';
 import { Project } from '../types';
 import ProjectModal from './ProjectModal';
@@ -19,10 +19,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div>
           {/* Cover Image */}
           <div className="relative h-48 overflow-hidden bg-slate-100">
-            <img
-              src={image}
+            <Image
+              src={project.image}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <span className="absolute top-3 left-3 px-3 py-1 text-xs font-semibold rounded-full bg-slate-900/80 text-white backdrop-blur-xs">
               {category}

@@ -1,3 +1,4 @@
+import type { StaticImageData } from "next/image";
 export interface Project {
   id: string;
   title: string;
@@ -5,7 +6,7 @@ export interface Project {
   longDescription?: string;
   category: 'DevOps & Cloud' | 'Full Stack' | 'Systems / Utilities';
   tags: string[];
-  image: string;
+  image: string | StaticImageData;
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
@@ -34,7 +35,7 @@ export interface Education {
 
 export interface SkillGroup {
   category: string;
-  skills: { name: string; level: number; iconName?: string }[];
+  skills: { name: string; iconName?: string }[];
 }
 
 export interface CodeFile {

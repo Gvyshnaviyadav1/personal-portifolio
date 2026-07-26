@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   const [filter, setFilter] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = ['All', 'DevOps & Cloud', 'Full Stack', 'Systems / Utilities'];
+  const categories = ['All', 'Full Stack', 'Systems / Utilities'];
 
   const filteredProjects = featuredProjects.filter((p) => {
     const matchesCategory = filter === 'All' || p.category === filter;
