@@ -1,0 +1,6 @@
+{
+  "name": "Personal Portfolio | Next.js App Router",
+  "description": "A modern, responsive personal portfolio website built with Next.js App Router (JavaScript), React, and Tailwind CSS. Features Projects, Skills, About, Contact Form, and full source code inspector.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
