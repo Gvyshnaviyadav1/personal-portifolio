@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React from 'react';
 import { X, ExternalLink, Github, CheckCircle2, Layers } from 'lucide-react';
 import { Project } from '../types';
@@ -17,13 +17,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
         {/* Modal Header */}
         <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-2xl">
-          <img
+          <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
-          
+
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-2 rounded-full bg-slate-900/60 text-white hover:bg-slate-900 transition-colors cursor-pointer"
